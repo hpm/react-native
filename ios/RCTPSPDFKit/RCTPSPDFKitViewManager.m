@@ -95,7 +95,7 @@ RCT_CUSTOM_VIEW_PROPERTY(toolbarTitle, NSString, RCTPSPDFKitView) {
   if (json) {
     view.pdfController.title = json;
     view.pdfController.document.title = json;
-    view.toolbarTitle
+    view.toolbarTitle = json
   }
 }
 
