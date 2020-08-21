@@ -47,6 +47,9 @@ RCT_CUSTOM_VIEW_PROPERTY(document, PSPDFDocument, RCTPSPDFKitView) {
     if (view.annotationAuthorName) {
       view.pdfController.document.defaultAnnotationUsername = view.annotationAuthorName;
     }
+    if (view.toolbarTitle) {
+      view.pdfController.document.title = view.toolbarTitle;
+    }
   }
 }
 
@@ -92,6 +95,8 @@ RCT_CUSTOM_VIEW_PROPERTY(rightBarButtonItems, NSArray<UIBarButtonItem *>, RCTPSP
 RCT_CUSTOM_VIEW_PROPERTY(toolbarTitle, NSString, RCTPSPDFKitView) {
   if (json) {
     view.pdfController.title = json;
+    view.pdfController.document.title = json;
+    view.toolbarTitle
   }
 }
 
